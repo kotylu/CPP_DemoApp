@@ -7,7 +7,7 @@ project "cppDemo"
 	objdir ("%{wks.location}/bin-int/" .. outputdir)
 
 	pchheader "pch.h"
-	pchsource "%{wks.location}/cppDemo/src/pch.h"
+	pchsource "%{wks.location}/%{prj.name}/src/pch.cpp"
 
 	files
 	{
