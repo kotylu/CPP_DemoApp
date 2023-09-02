@@ -9,4 +9,9 @@ public:
 	virtual void OnEvent(Event& event) {};
 	virtual void OnUpdate(AppUpdateEvent& event) {};
 	virtual void OnRender(AppRenderEvent& event) {};
+	virtual void OnAttach() {};
+	virtual void OnDetach() {};
+	virtual void OnImGuiRender() {};
+protected:
+	EventListener() {};
 };

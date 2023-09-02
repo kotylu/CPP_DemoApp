@@ -23,12 +23,14 @@ project "cppDemo"
 	includedirs
 	{
 		"src",
-		"%{IncludeDirs.GLFW}"
+		"%{IncludeDirs.GLFW}",
+		"%{IncludeDirs.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"ImGui",
 		"%{LibFiles.OPENGL}"
 	}
 

@@ -7,6 +7,7 @@ class WinWindow : public Window
 public:
 	WinWindow(const WindowProps& props);
 	~WinWindow();
+	virtual void* GetNative() const override { return m_Window; };
 	inline unsigned int GetWidth() const override { return m_Data.Width; };
 	inline unsigned int GetHeight() const override { return m_Data.Height; };
 	inline bool IsVSyncEnabled() const override { return m_Data.VSync; };
@@ -32,4 +33,5 @@ private:
 	static unsigned char GLFW_WINDOW_COUNT;
 	GLFWwindow* m_Window;
 	WindowData m_Data;
+
 };
